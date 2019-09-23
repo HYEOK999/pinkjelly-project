@@ -337,7 +337,7 @@ input:checked ~ .carousel-dot-group .carousel-dot{
 .visual-bottom{
     height: 400px;
     background: url(https://www.limrim.co.kr/web/upload/ga09/mainbgbanner.jpg) no-repeat 50% 0 fixed,
-    #ccc linear-gradient(#ccc, #eee, #fff) repeat 0 0 fixed; 
+    #fff repeat 0 0 fixed; 
     background-size: 100vw;
     display: flex;
     justify-content: center;
