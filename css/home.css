@@ -2,7 +2,6 @@
 @import url('https://necolas.github.io/normalize.css/latest/normalize.css');
 @import url('https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
 @import url('./fontello/css/fontello.css');
-
 /* 초기화 */
 *, *::before, *::after {
   box-sizing: border-box;
