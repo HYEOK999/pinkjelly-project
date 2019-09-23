@@ -2,6 +2,11 @@
 @import url('https://necolas.github.io/normalize.css/latest/normalize.css');
 @import url('https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
 @import url('./fontello/css/fontello.css');
+
+/* @font-face{
+    font-family: "LimrimFont";
+    src: url('./font/fontawesome-webfont.woff2') format('woff2');
+} */
 /* 초기화 */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -323,7 +328,33 @@ input:checked ~ .carousel-dot-group .carousel-dot{
     display: block;     
 }
 
+/* 
+    <div class="visual-bottom">
+        <a href="#" role="button">N E W A R R I V A L S</a>
+    </div>
+*/
+
 .visual-bottom{
-    /* background: url(./images/bg_flower.png) no-repeat 50% 0 fixed,
-    #ccc linear-gradient(#ccc, #eee, #fff) repeat 0 0 fixed; */  
+    height: 400px;
+    background: url(https://www.limrim.co.kr/web/upload/ga09/mainbgbanner.jpg) no-repeat 50% 0 fixed,
+    #ccc linear-gradient(#ccc, #eee, #fff) repeat 0 0 fixed; 
+    background-size: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.visual-bottom a{
+    font-weight: 400;
+    background-color: #fff;
+    color: #181818;
+    padding : 15px 40px 20px 32px;
+    font-size: 2.3rem;
+    transition: background-color .5s 0s, color .5s 0s;
+    letter-spacing: 5px;
+}
+
+.visual-bottom a:hover{
+    background-color: #181818;
+    color: #fff;
 }
