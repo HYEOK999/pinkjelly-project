@@ -19,4 +19,21 @@ function slideShow(){
     },2000);
 }
 
+var a = document.querySelector(".header");
+
+window.addEventListener('scroll', function(){
+    if(window.scrollY > 1){
+        // console.log(123)
+        // a.classList.remove('.header');
+        // a.classList.add('.header-active');
+        a.setAttribute('style', 'background: rgba(255,255,255,0.5)');
+    }
+    if(window.scrollY == 0){
+        // console.log(456)
+        // a.classList.add('.header-active');
+        a.setAttribute('style', 'background: rgba(255,255,255,0)');
+    }
+})
+
 slideShow();
+

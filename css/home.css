@@ -79,8 +79,24 @@ body{
     padding: 25px 35px 25px 55px;
     font-size: 14px;
     font-weight: 500;
-    background: rgba(#fff, #fff, #fff, 0);
+    background: rgba(255, 255, 255, 0);
 }
+
+/* .header-active {
+    animation-name: 'active';
+    animation-duration: .2s;
+}
+
+@keyframes active {
+    from{
+
+        background: rgba(255, 255, 255, 0);
+    }
+
+    to{   
+        background: rgba(255, 255, 255, 0.5);
+    }
+} */
 
 .header h1{
     margin: 0;
@@ -90,7 +106,6 @@ body{
 .navigation{
     margin: 0;
     width: 70%;
-    /* min-width: 80%; */
 }
 
 .navigation-menu{
@@ -339,9 +354,9 @@ input:checked ~ .carousel-dot-group .carousel-dot{
 
 /* 메인 콘텐츠 new arrivals */
 .new-arrivals{
-    /* background-color: pink; */
     height: auto;
     text-align: center;
+    width: 100%;
 }
 
 .new-arrivals-heading{
@@ -361,11 +376,9 @@ input:checked ~ .carousel-dot-group .carousel-dot{
     font-size: 11px;
     letter-spacing: 1px;
     font-weight: 600;
-    /* grid-area: new-arrivals-header; */
-    /* grid-area: 1/1/2/4; */
 }
 
-.new-arrivals figure{
+.new-arrivals figure, .best-items figure{
     margin: 0;
 }
 
@@ -397,11 +410,9 @@ input:checked ~ .carousel-dot-group .carousel-dot{
 
 .new-arrivals ul li:nth-child(2){
     grid-area: li2;
-    /* grid-area: 2/2/3/3; */
 }
 .new-arrivals ul li:nth-child(3){
     grid-area: li3;
-    /* grid-area: 2/3/3/4; */
 }
 .new-arrivals ul li:nth-child(4){
     grid-area: li4;
@@ -415,20 +426,175 @@ input:checked ~ .carousel-dot-group .carousel-dot{
     grid-area: li6;
 }
 
-.new-arrivals-desc{
+.new-arrivals-desc, .best-items-desc{
     margin-top: 8px;
 }
 
-.new-arrivals li > span{
+.new-arrivals li > span, .best-items li > span{
     display: block;
     font-size: 11px;
     margin-bottom: 8px;
 }
 
+/* 메인 콘텐츠 : best-items*/
+.best-items{
+    height: auto;
+    text-align: center;
+    width: 100%;
+}
+
+.best-items-heading{
+    vertical-align: center;
+}
+
+.best-items-heading h2{
+    display: inline-block;
+    margin: 120px 0 60px 0 ;
+    width: auto;
+    height: auto;
+    padding-top: 10px;
+    border : 1px solid black;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    font-size: 11px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.best-items ul{
+    list-style: none;
+}
+
+.best-items-img{
+    width: 290px;
+    height: 370px;   
+}
+
+.best-items-img-big{
+    width: 590px;
+    height: 830px;      
+}
+
+.best-items-group1{
+    display: grid;
+    grid-template-columns: 590px 290px 290px;
+    grid-template-rows: 415px 415px;
+    grid-column-gap: 20px;
+    grid-template-areas: "best-item-li1 best-item-li2 best-item-li3"
+    "best-item-li1 best-item-li4 best-item-li5";
+    list-style: none;
+    padding : 0;
+    margin: 0;
+    justify-content: center;
+    font-size: 1.2rem;
+    text-align: left;
+    line-height: 1.3;
+}
+
+.best-items-group1 li:nth-child(1){
+    grid-area: best-item-li1;
+    position: relative;
+}
+
+.best-items-group1 li:nth-child(1) figcaption{
+    position: absolute;
+    left: 20px;
+    bottom : 0;
+    margin : 0 0 47px 0;
+}
+
+.best-items-group1 li:nth-child(1) span{
+    position: absolute;
+    left: 20px; 
+    bottom: 0px;
+    margin : 0 0 30px 0;
+}
+
+.best-items-group1 li:nth-child(2){
+    grid-area: best-item-li2;
+}
+
+.best-items-group1 li:nth-child(3){
+    grid-area: best-item-li3;
+}
+
+.best-items-group1 li:nth-child(4){
+    grid-area: best-item-li4;
+    margin-top: 40px;
+}
+
+.best-items-group1 li:nth-child(5){
+    grid-area: best-item-li5;
+    margin-top: 40px;
+}
+
+.best-items-group2{
+    display: grid;
+    grid-template-columns: 290px 290px 590px;
+    grid-template-rows: 415px 415px;
+    grid-column-gap: 20px;
+    grid-template-areas: "best-item-li4 best-item-li2 best-item-li1"
+    "best-item-li5 best-item-li3 best-item-li1";
+    list-style: none;
+    padding : 0;
+    margin: 100px 0 220px 0;
+    justify-content: center;
+    font-size: 1.2rem;
+    text-align: left;
+    line-height: 1.3;
+}
+
+.best-items-group2 li:nth-child(1){
+    grid-area: best-item-li1;
+    position: relative;
+}
+
+.best-items-group2 li:nth-child(1) figcaption{
+    position: absolute;
+    left: 20px;
+    bottom : 0;
+    margin : 0 0 60px 0;
+}
+
+.best-items-group2 li:nth-child(1) span{
+    position: absolute;
+    left: 20px;
+    bottom: 0px;
+    margin : 0 0 45px 0;
+}
+
+.best-items-group2 li:nth-child(1) .sold-out{
+    position: absolute;
+    left: 20px;
+    bottom: 0px;
+    margin : 0 0 20px 0;
+}
+
+.best-items-group2 li:nth-child(2){
+    grid-area: best-item-li2;
+}
+
+.best-items-group2 li:nth-child(3){
+    grid-area: best-item-li3;
+    margin-top: 40px;
+}
+
+.best-items-group2 li:nth-child(4){
+    grid-area: best-item-li4;
+}
+
+.best-items-group2 li:nth-child(5){
+    grid-area: best-item-li5;
+    margin-top: 40px;
+}
+
+
 .sold-out{
     width: 55px;
-    height: 15px;
+    height: 12px;
     position: relative;
+    text-indent: 5px;
 }
 
 .sold-out::after{
@@ -438,8 +604,28 @@ input:checked ~ .carousel-dot-group .carousel-dot{
     content: '';
     width: 100%; 
     height: 100%; 
-    background: #fff url('https://www.limrim.co.kr/web/upload/icon_201707101044419500.gif') no-repeat 100% 0;
+    background: url('https://www.limrim.co.kr/web/upload/icon_201707101044419500.gif') no-repeat 100% 0;
 } 
+
+.new-goods{
+    width: 25px;
+    height: 12px;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    text-indent: 5px;
+}
+
+.new-goods::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%; 
+    height: 100%; 
+    background: url('https://www.limrim.co.kr/web/upload/custom_2.gif') no-repeat 100% 0;
+} 
+
 
 .visual-bottom{
     height: 400px;
@@ -451,15 +637,24 @@ input:checked ~ .carousel-dot-group .carousel-dot{
 }
 
 .visual-bottom a{
-    background-color: #fff;
+    text-align: center;
+    width: 340px;
+    height: 55px;
+    background-color: rgb(243, 245, 244);
     color: #181818;
     padding : 15px 40px 20px 32px;
-    font-size: 2.3rem;
+    font-size: 2.6rem;
     transition: background-color .5s 0s, color .5s 0s;
-    letter-spacing: 15px;
+    letter-spacing: 6px;
+}
+
+.visual-bottom a strong{
+    font-weight: 600;
+    /* text-decoration: none; */
+    /* text-shadow: 1px 0 0 black, 0 1px 0 black, -1px 0 0 black, 0 -1px 0 black;   */
 }
 
 .visual-bottom a:hover{
     background-color: #181818;
-    color: #fff;
+    color: rgb(243, 245, 244);
 }
