@@ -3,11 +3,13 @@
 @import url('https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
 @import url('./fontello/css/fontello.css');
 
-/* @font-face{
+
+@font-face{
     font-family: "LimrimFont";
     src: url('./font/fontawesome-webfont.woff2') format('woff2');
-} */
+}
 /* 초기화 */
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -45,7 +47,12 @@ html{
     margin: 0;
 }
 
-.main-contents .insta-id, .footer{
+.main-contents {
+    width: calc(100vw - 300px); 
+    margin: 0 auto;
+}
+
+.insta-id, .footer{
     width: 100vw;
     margin: 0 auto;
 }
@@ -53,9 +60,10 @@ html{
 body{
   margin: 0;
   color: #181818;
-  font-family: 'Spoqa Han Sans', 'Sans-serif';
-  font-weight: 500;
+  /* font-family: 'Spoqa Han Sans', 'Sans-serif'; */
+  /* font-weight: 500; */
   /* overflow-x:hidden; */
+  font-family: "LimrimFont";
 }
 
 .header{
@@ -69,7 +77,8 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 25px 35px 25px 55px;
-    font-size: 13px;
+    font-size: 14px;
+    font-weight: 500;
     background: rgba(#fff, #fff, #fff, 0);
 }
 
@@ -328,16 +337,113 @@ input:checked ~ .carousel-dot-group .carousel-dot{
     display: block;     
 }
 
-/* 
-    <div class="visual-bottom">
-        <a href="#" role="button">N E W A R R I V A L S</a>
-    </div>
-*/
+/* 메인 콘텐츠 new arrivals */
+.new-arrivals{
+    /* background-color: pink; */
+    height: auto;
+    text-align: center;
+}
+
+.new-arrivals-heading{
+    vertical-align: center;
+}
+
+.new-arrivals-heading h2{
+    display: inline-block;
+    margin: 150px 0 60px 0 ;
+    width: auto;
+    height: auto;
+    padding-top: 10px;
+    border : 1px solid black;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    font-size: 11px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    /* grid-area: new-arrivals-header; */
+    /* grid-area: 1/1/2/4; */
+}
+
+.new-arrivals figure{
+    margin: 0;
+}
+
+.new-arrivals ul{
+    display: grid;
+    grid-template-columns: 390px 390px 390px;
+    grid-template-rows: 570px 570px;
+    grid-column-gap: 20px;
+    grid-row-gap: 80px;
+    grid-template-areas: "li1 li2 li3"
+    "li4 li5 li6";
+    list-style: none;
+    padding : 0;
+    margin: 0;
+    justify-content: center;
+    font-size: 1.2rem;
+    text-align: left;
+    line-height: 1.3;
+}
+
+.new-arrivals-img{
+    width: 390px;
+    height: 500px;   
+}
+
+.new-arrivals ul li:nth-child(1){
+    grid-area: li1;
+}
+
+.new-arrivals ul li:nth-child(2){
+    grid-area: li2;
+    /* grid-area: 2/2/3/3; */
+}
+.new-arrivals ul li:nth-child(3){
+    grid-area: li3;
+    /* grid-area: 2/3/3/4; */
+}
+.new-arrivals ul li:nth-child(4){
+    grid-area: li4;
+}
+
+.new-arrivals ul li:nth-child(5){
+    grid-area: li5;
+}
+
+.new-arrivals ul li:nth-child(6){
+    grid-area: li6;
+}
+
+.new-arrivals-desc{
+    margin-top: 8px;
+}
+
+.new-arrivals li > span{
+    display: block;
+    font-size: 11px;
+    margin-bottom: 8px;
+}
+
+.sold-out{
+    width: 55px;
+    height: 15px;
+    position: relative;
+}
+
+.sold-out::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%; 
+    height: 100%; 
+    background: #fff url('https://www.limrim.co.kr/web/upload/icon_201707101044419500.gif') no-repeat 100% 0;
+} 
 
 .visual-bottom{
     height: 400px;
-    background: url(https://www.limrim.co.kr/web/upload/ga09/mainbgbanner.jpg) no-repeat 50% 0 fixed,
-    #fff repeat 0 0 fixed; 
+    background: url(https://www.limrim.co.kr/web/upload/ga09/mainbgbanner.jpg) no-repeat 50% 0 fixed;
     background-size: 100vw;
     display: flex;
     justify-content: center;
@@ -345,13 +451,12 @@ input:checked ~ .carousel-dot-group .carousel-dot{
 }
 
 .visual-bottom a{
-    font-weight: 400;
     background-color: #fff;
     color: #181818;
     padding : 15px 40px 20px 32px;
     font-size: 2.3rem;
     transition: background-color .5s 0s, color .5s 0s;
-    letter-spacing: 5px;
+    letter-spacing: 15px;
 }
 
 .visual-bottom a:hover{
