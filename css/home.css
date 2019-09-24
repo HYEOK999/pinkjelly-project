@@ -658,3 +658,176 @@ input:checked ~ .carousel-dot-group .carousel-dot{
     background-color: #181818;
     color: rgb(243, 245, 244);
 }
+
+footer dl ,footer dt ,footer dd ,footer address, footer ul{
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    font-size: 1.2rem;
+}
+
+.footer{
+    position: relative;
+    background-color: #eee;
+    height: 415px;
+    line-height: 1.8rem;
+}
+
+.footer-logo{
+    position: absolute;
+    top : 70px;
+    left : 150px;
+    width: 95px;
+    height: 15px;
+    color : #eee;
+}
+.footer-logo::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%; 
+    height: 100%; 
+    background: url('https://learve.co.kr/web/upload/ga09/logo.png') no-repeat;
+    background-size: 90%;
+} 
+
+.footer-group{
+    display: flex;
+    justify-content: flex-start;
+    padding : 125px 150px 0 150px;
+}
+
+.footer-group1, .footer-group2 dl{
+    white-space: pre-line;
+    margin-right: 150px;
+    margin-top: -1em;
+}
+
+.footer-group1 dt, .footer-group2 dt{
+    display: inline-block;
+    margin: 0;
+}
+
+.footer-group1 dd, .footer-group2 dd{
+    display: inline-block;
+    margin : 0 0 auto 5px;
+}
+
+dt, .footer-group1 dd, .footer-group3 {
+    margin-right: 5px;
+    color: gray;
+}
+
+.footer-account{
+    color: #181818 !important;
+    margin : 0 5px 0 0 !important;
+}
+
+.footer-bold-text{
+    font-size: 1.2em;
+    color: #181818 !important;
+    padding-bottom: 12px;
+}
+
+.kakao::before{
+    content: url('https://www.limrim.co.kr/web/upload/ga09/kt.gif');
+    transform: translateY(15px);
+    position: absolute;
+    top: 0;
+    left: -25px;
+}
+
+.kakao{
+    position: relative;
+    text-indent: 25px;
+    padding: 16px 0 23px 0;
+}
+
+.footer-group3, .social-link{
+    list-style: none;
+}
+
+.footer-group3{
+    width: 160px;
+}
+
+.social-link{
+    margin-top: 65px;
+}
+
+.social-link li{
+    display: inline-block;
+}
+
+.social-link li:nth-child(1){
+    width: 65px;
+    height: 20px;
+    background: url("https://learve.co.kr/web/upload/ga09/sns/fb2.png") no-repeat;
+    text-indent: 70px;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+    filter: grayscale(100%);
+    transition: filter .2s 0s;
+}
+
+.social-link li:nth-child(2){
+    margin : 0 12px;
+    width: 20px;
+    height: 20px;
+    background: url("https://learve.co.kr/web/upload/ga09/sns/in2.png") no-repeat;
+    text-indent: 70px;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+    filter: grayscale(100%);
+    transition: filter .2s 0s;
+}
+
+
+.social-link li:nth-child(3){
+    width: 35px;
+    height: 20px;
+    background: url("https://learve.co.kr/web/upload/ga09/sns/blog2.png") no-repeat;
+    text-indent: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+    filter: grayscale(100%);
+    transition: filter .2s 0s;
+}
+.social-link li:nth-child(1):hover,
+.social-link li:nth-child(2):hover,
+.social-link li:nth-child(3):hover{
+    filter: grayscale(0%);
+}
+
+.copyright{
+    position: absolute;
+    bottom : 75px;
+    left : 150px;
+    font-size: 1.2rem;
+    letter-spacing: .1em;
+}
+
+.footer .join-us{
+    position: absolute;
+    top : 60px;
+    right : 150px;
+    width: 140px;
+    height: 40px;
+    font-size: 1.3rem;
+    color: #fff;
+    background: #181818;
+    text-align: center;
+    padding : 12px 0;
+    transition: background .2s 0s;
+}
+
+.footer .join-us:hover{
+    background: rgb(62, 169, 193);
+}
+.ad{
+    display: none;
+}
