@@ -658,3 +658,78 @@ input:checked ~ .carousel-dot-group .carousel-dot{
     background-color: #181818;
     color: rgb(243, 245, 244);
 }
+
+/* Footer */
+.footer{
+    height: 430px;
+    background: pink;
+    font-size: 1.2rem;
+}
+
+.footer-group{
+    display: flex;
+    justify-content: flex-start;    
+    width: calc(100vw - 300px);
+    margin: auto;
+    margin-top: 125px;
+    line-height: 1.8rem;;
+}
+
+.footer-group dl{
+    margin: 0;
+    white-space: pre-wrap;
+    margin-right: 150px;
+    margin-left: -50px;
+}
+
+dt, dd{
+    font-style: normal;
+    display: inline-block;    
+    margin: 0;
+}
+
+dt, .footer-group3, .footer-group1 dd {
+    margin-right: 5px;
+    color: gray;
+}
+
+.footer-group1 dt:nth-last-child(2), .footer-group1 dd:nth-last-child(1), .footer-group1 dd:nth-last-child(3){
+    color: black !important;
+}
+
+.kakao::before{
+    content: url('https://www.limrim.co.kr/web/upload/ga09/kt.gif');
+    transform: translateY(20px);
+    position: absolute;
+    top: -20%;
+    left: -20px;
+}
+
+.kakao{
+    text-indent: 20px;
+    position: relative;
+}
+
+.footer-bold-text{
+    color : black !important;
+    font-weight: 600;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.footer-group3{
+    list-style: none;
+    padding: 0;
+    width: 265px;
+    display: block;
+    margin: 1.2rem 0 0 0 ;
+}
+
+.social-link{
+    display: none;
+    list-style: none;
+}
+
+.copyright{
+    display: none;
+}
