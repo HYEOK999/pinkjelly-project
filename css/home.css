@@ -38,6 +38,7 @@ a{
 }
 
 html{
+  scroll-behavior: smooth;
   font-size: 10px;
   margin: 0;
 }
@@ -238,11 +239,6 @@ body{
     height: 10px;
     margin-top: -8px;
     padding: 5px 20px 5px 0;    
-}
-
-.scroll{
-    /* top bottom toggle */
-    display: none;
 }
 
 .slides{
@@ -865,4 +861,28 @@ dt, .footer-group1 dd, .footer-group3 {
 
 .ad{
     display: none;
+}
+
+.scroll{
+    width: 55px;
+    height: 45px;
+    position: fixed;
+    right: 18px;
+    text-indent: 56px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.top{
+    background: url('https://www.limrim.co.kr/web/upload/ga09/gotop.png') no-repeat;
+    background-size:  100%;
+    top: 82%;
+    z-index: 2000;
+}
+
+.bottom{
+    background: url('https://www.limrim.co.kr/web/upload/ga09/gotop2.png') no-repeat;
+    background-size:  100%;
+    top: 90%;
+    z-index: 2000;
 }
