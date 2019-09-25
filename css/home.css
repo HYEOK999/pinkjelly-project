@@ -677,6 +677,22 @@ input:checked ~ .carousel-dot-group .carousel-dot{
     color: rgb(243, 245, 244);
 }
 
+/* Insta ID */
+.insta-id{
+    width: calc(100vw - 700px);
+    height: 200px;
+    border-bottom: #181818 solid 1px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-end;
+    font-size: 1.1rem;
+}
+.insta-id span{
+    margin-bottom: 10px;
+}
+
+/* footer */
+
 footer dl ,footer dt ,footer dd ,footer address, footer ul{
     margin: 0;
     padding: 0;
