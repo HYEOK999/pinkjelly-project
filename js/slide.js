@@ -32,5 +32,6 @@ window.addEventListener('scroll', function(){
         a.classList.remove('header-active');
     }
 })
+
 slideShow();
 
