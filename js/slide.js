@@ -13,7 +13,6 @@ function slideShow(){
             img[index].checked = true;
         }
         if(index == 6){
-            console.log(123)
             index = 0;
         }
     },2000);
@@ -23,17 +22,15 @@ var a = document.querySelector(".header");
 
 window.addEventListener('scroll', function(){
     if(window.scrollY > 1){
-        // console.log(123)
-        // a.classList.remove('.header');
-        // a.classList.add('.header-active');
-        a.setAttribute('style', 'background: rgba(255,255,255,0.5)');
+        console.log(123)
+        a.classList.add('header-active');
+        a.classList.remove('header-disabled');
     }
     if(window.scrollY == 0){
-        // console.log(456)
-        // a.classList.add('.header-active');
-        a.setAttribute('style', 'background: rgba(255,255,255,0)');
+        console.log(456)
+        a.classList.add('header-disabled');
+        a.classList.remove('header-active');
     }
 })
-
 slideShow();
 
