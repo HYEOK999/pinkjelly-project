@@ -18,18 +18,16 @@ function slideShow(){
     },2000);
 }
 
-var a = document.querySelector(".header");
+var header = document.querySelector(".header");
 
 window.addEventListener('scroll', function(){
     if(window.scrollY > 1){
-        console.log(123)
-        a.classList.add('header-active');
-        a.classList.remove('header-disabled');
+        header.classList.add('header-active');
+        header.classList.remove('header-disabled');
     }
     if(window.scrollY == 0){
-        console.log(456)
-        a.classList.add('header-disabled');
-        a.classList.remove('header-active');
+        header.classList.add('header-disabled');
+        header.classList.remove('header-active');
     }
 })
 slideShow();
