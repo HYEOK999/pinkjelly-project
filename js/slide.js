@@ -1,7 +1,5 @@
 function slideShow(){
     var index = 0;
-
-    // console.log(document.getElementById("img-1"))
     var img = document.querySelectorAll('#img-1, #img-2, #img-3, #img-4, #img-5, #img-6, #img-7');
 
     var intervalId = setInterval( function(){
@@ -9,10 +7,10 @@ function slideShow(){
             img[index].checked = false;    
         }
         if (img[index].checked == false){
-            index ++;
             img[index].checked = true;
+            index ++;
         }
-        if(index == 6){
+        if(index == 7){
             index = 0;
         }
     },2000);
@@ -35,7 +33,6 @@ var button = document.querySelectorAll(".top, .bottom");
 
 window.addEventListener('scroll', function(){
     if(window.scrollY > 1){
-        console.log(4565);
         button[0].classList.add('button-active');
         button[0].classList.remove('button-disabled');
         button[1].classList.add('button-active');
@@ -48,5 +45,6 @@ window.addEventListener('scroll', function(){
         button[1].classList.remove('button-active');
     }
 })
+
 slideShow();
 

@@ -449,6 +449,10 @@ input:checked ~ .carousel-dot-group .carousel-dot{
     margin-bottom: 8px;
 }
 
+.sold-out, .new-goods {
+    display: inline-block !important;
+}
+
 /* 메인 콘텐츠 : best-items*/
 .best-items{
     height: auto;
@@ -602,12 +606,13 @@ input:checked ~ .carousel-dot-group .carousel-dot{
     margin-top: 40px;
 }
 
-
 .sold-out{
     width: 55px;
     height: 12px;
     position: relative;
     text-indent: 5px;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .sold-out::after{
@@ -627,6 +632,7 @@ input:checked ~ .carousel-dot-group .carousel-dot{
     overflow: hidden;
     white-space: nowrap;
     text-indent: 5px;
+    margin-left : 5px;
 }
 
 .new-goods::after{
