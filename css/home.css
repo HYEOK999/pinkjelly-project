@@ -74,6 +74,7 @@ body{
     margin : 0;
     z-index: 1000;
     width: 100%;
+    min-width: 1300px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -114,8 +115,6 @@ body{
         background: rgba(255, 255, 255, 0);
     }
 }
-
-
 
 .header h1{
     margin: 0;
@@ -859,8 +858,54 @@ dt, .footer-group1 dd, .footer-group3 {
     background: rgb(62, 169, 193);
 }
 
-.ad{
+.aside{
+    width: 305px;
+}
+
+.advertise-img{
+    display: block;
+}
+
+.advertise{
+    position: absolute;
+    /* display: none; */
+    top: 135px;
+    left : 105px;
+    z-index: 2000;
+}
+
+.advertise-close:checked,
+.advertise-close:checked ~ label,
+.advertise-close:checked + img,
+.advertise-close:checked ~ div {
     display: none;
+}
+
+.advertise-img{
+    margin-left:5px;
+}
+
+.advertise-checkbox{
+    margin:0 0 2px 8px;
+}
+
+.advertise-close-label{
+    margin:0 10px 0 30px;
+}
+
+.advertise div{
+    color:white;
+    font-size:1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background: #ccc;
+    width: 315px;
+    height: 25px;
+}
+
+.advertise-close-label{
+    cursor: pointer;
 }
 
 .scroll{
@@ -875,7 +920,8 @@ dt, .footer-group1 dd, .footer-group3 {
 
 .top{
     background: url('https://www.limrim.co.kr/web/upload/ga09/gotop.png') no-repeat;
-    background-size:  100%;
+    background-size:  100%; 
+    opacity: 0;
     top: 82%;
     z-index: 2000;
 }
@@ -883,6 +929,39 @@ dt, .footer-group1 dd, .footer-group3 {
 .bottom{
     background: url('https://www.limrim.co.kr/web/upload/ga09/gotop2.png') no-repeat;
     background-size:  100%;
+    opacity: 0;
     top: 90%;
     z-index: 2000;
+}
+
+.button-disabled {
+    animation-name: button-disabled;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+.button-active {
+    animation-name: button-active;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes button-active {
+    0% {
+        opacity: 0;
+    }
+
+    100% {   
+        opacity: 1;
+    }
+}
+
+@keyframes button-disabled {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
