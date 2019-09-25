@@ -82,15 +82,15 @@ body{
     background: rgba(255, 255, 255, 0);
 }
 
-.header-none-active {
+.header-disabled {
     animation-name: disabled;
-    animation-duration: 5s;
+    animation-duration: .5s;
     animation-fill-mode: forwards;
 }
 
 .header-active {
     animation-name: active;
-    animation-duration: 5s;
+    animation-duration: .5s;
     animation-fill-mode: forwards;
 }
 
@@ -647,7 +647,7 @@ input:checked ~ .carousel-dot-group .carousel-dot{
 
 .visual-bottom{
     height: 400px;
-    background: url(https://www.limrim.co.kr/web/upload/ga09/mainbgbanner.jpg) no-repeat 50% 0 fixed;
+    background: url('https://www.limrim.co.kr/web/upload/ga09/mainbgbanner.jpg') no-repeat 50% 0 fixed;
     background-size: 100vw;
     display: flex;
     justify-content: center;

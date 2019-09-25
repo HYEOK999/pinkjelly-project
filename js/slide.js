@@ -24,11 +24,11 @@ window.addEventListener('scroll', function(){
     if(window.scrollY > 1){
         console.log(123)
         a.classList.add('header-active');
-        a.classList.remove('disabled');
+        a.classList.remove('header-disabled');
     }
     if(window.scrollY == 0){
         console.log(456)
-        a.classList.add('disabled');
+        a.classList.add('header-disabled');
         a.classList.remove('header-active');
     }
 })
