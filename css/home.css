@@ -170,7 +170,7 @@ body{
     position: relative;
 }
 
-.dropdown-menu1:hover ul{
+.dropdown-menu1:hover ul,.dropdown-menu1:focus ul{
     transition: height .2s linear;
     height: 130px;
     text-align: center;
@@ -184,7 +184,7 @@ body{
     background: black;
 }
 
-.dropdown-menu2:hover ul{
+.dropdown-menu2:hover ul,.dropdown-menu2:focus ul{
     transition: height .2s linear;
     position: absolute;
     height: 130px;
@@ -199,7 +199,7 @@ body{
     background: black;
 }
 
-.dropdown-menu3:hover ul{
+.dropdown-menu3:hover ul,.dropdown-menu3:focus ul{
     transition: height .2s linear;
     height: 150px;
     text-align: center;
@@ -222,7 +222,9 @@ body{
     transition: color .2s 0s;
 }
 
-.dropdown-menu1 ul li a:hover, .dropdown-menu2 ul li a:hover, .dropdown-menu3 ul li a:hover{
+.dropdown-menu1 ul li a:hover, 
+.dropdown-menu2 ul li a:hover, 
+.dropdown-menu3 ul li a:hover{
    color: pink;
 }
 

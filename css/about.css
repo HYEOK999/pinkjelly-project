@@ -1,0 +1,569 @@
+@charset "utf-8";
+@import url('https://necolas.github.io/normalize.css/latest/normalize.css');
+@import url('https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
+@import url('./fontello/css/fontello.css');
+
+
+@font-face{
+    font-family: "LimrimFont";
+    src: url('./font/fontawesome-webfont.woff2') format('woff2');
+}
+/* 초기화 */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 숨김 콘텐츠 */
+.a11y-hidden{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+}
+
+/* clearfix - float 이슈를 해결하기 위한 선언 */
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+html{
+  scroll-behavior: smooth;
+  font-size: 10px;
+  margin: 0;
+}
+
+.header{
+    width: 100vw;
+    margin: 0;
+}
+
+.footer{
+    width: 100vw;
+    margin: 0 auto;
+}
+
+body{
+  margin: 0;
+  color: #181818;
+  /* font-family: 'Spoqa Han Sans', 'Sans-serif'; */
+  /* font-weight: 500; */
+  /* overflow-x:hidden; */
+  font-family: "LimrimFont";
+}
+
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    margin : 0;
+    z-index: 1000;
+    width: 100%;
+    min-width: 1300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 35px 25px 55px;
+    font-size: 14px;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0);
+}
+
+.header-disabled {
+    animation-name: disabled;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+.header-active {
+    animation-name: active;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes active {
+    0% {
+        background: rgba(255, 255, 255, 0);
+    }
+
+    100% {   
+        background: rgba(255, 255, 255, 0.5);
+    }
+}
+
+@keyframes disabled {
+    0% {
+        background: rgba(255, 255, 255, 0.5);
+    }
+
+    100% {
+        background: rgba(255, 255, 255, 0);
+    }
+}
+
+.header h1{
+    margin: 0;
+    width: 30%;
+}
+
+.navigation{
+    margin: 0;
+    width: 70%;
+}
+
+.navigation-menu{
+    list-style: none;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.sub-menu > a{
+    padding: 25px 30px;
+    transition: color .2s 0s;
+    white-space: nowrap;
+}
+
+.sub-menu a:hover{
+    color: gray;
+}
+
+.navigation-menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 0;
+    overflow: hidden;
+    /* display: none; */
+}
+
+/* 드롭다운 */
+.dropdown-menu3 > a::before{
+    content: '\e805';
+    font-family: "fontello";
+    padding: 5px;
+}
+
+.dropdown-menu3 > a::after, .dropdown-menu2 > a::after, .dropdown-menu1 > a::after{
+    content: '\f107';
+    font-family: "fontello";
+    padding: 5px;
+}
+
+.dropdown-menu1, .dropdown-menu2, .dropdown-menu3{
+    position: relative;
+}
+
+.dropdown-menu1:hover ul{
+    transition: height .2s linear;
+    height: 130px;
+    text-align: center;
+    line-height: 2.5rem;
+    position: absolute;
+    margin-top: -5px;
+    padding : 15px 21px;
+    top: 40px;
+    opacity: 0.8;
+    color: white;
+    background: black;
+}
+
+.dropdown-menu2:hover ul{
+    transition: height .2s linear;
+    position: absolute;
+    height: 130px;
+    width: 160px;
+    text-align: center;
+    line-height: 2.5rem;
+    margin-top: -5px;
+    padding : 15px 0;
+    top: 40px;
+    opacity: 0.8;
+    color: white;
+    background: black;
+}
+
+.dropdown-menu3:hover ul{
+    transition: height .2s linear;
+    height: 150px;
+    text-align: center;
+    line-height: 2.5rem;
+    position: absolute;
+    margin-top: -5px;
+    padding : 15px 15px;
+    top: 40px;
+    opacity: 0.8;
+    color: white;
+    background: black ;
+}
+
+.dropdown-menu1 ul li a, .dropdown-menu3 ul li a{
+    padding: 0 30px;
+    transition: color .2s 0s;
+}
+
+.dropdown-menu2 ul li a{
+    transition: color .2s 0s;
+}
+
+.dropdown-menu1 ul li a:hover, .dropdown-menu2 ul li a:hover, .dropdown-menu3 ul li a:hover{
+   color: pink;
+}
+
+.basket a::before{
+    margin: 0;
+    padding-left: 25px;
+    content: '\f290';
+    font-family: "fontello";
+}
+
+.basket a{
+    width: 10px;
+    height: 10px;
+    margin-top: -8px;
+    padding: 5px 20px 5px 0;    
+}
+
+/*main-contents 메인콘텐츠 메인*/
+.main-contents{
+    margin : 0 auto;
+    padding : 0;
+    height : auto;
+    width : 1220px;
+    /* background: rgb(91, 91, 67); */
+}
+
+.about-brand{
+    margin : 0;
+    padding : 0;
+    height: 750px;
+    /* background-color: yellow; */
+    text-align: center;
+    color: rgb(178,178,178);
+}
+
+.about-brand-heading{
+    display: inline-block;
+    padding-top: 15px;
+    margin-top: 185px;
+    font-size: 1.1em;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    border-top: 1px solid rgb(178,178,178);
+}
+
+.about-brand-desc{
+    font-weight: 500;
+    width: 650px;
+    margin: 0 auto;
+    font-size: 1.8em;
+    padding-top: 235px;
+    padding-bottom: 270px;
+    text-align: start;
+}
+
+.Worthy{
+    height: 1024px;
+}
+
+.Worthy-heading::before{
+    content: '01';
+    margin-left: 60px;
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+.Worthy-heading{
+    padding-top: 125px;
+    font-weight: 300;
+    margin : 0;
+    height: 288px;
+    background-color: rgb(162,162,162);
+    color: #fff;
+    font-size: 3.3rem;
+}
+
+.Worthy-img{
+    float: right;
+}
+
+.Worthy-desc{
+    position: relative;
+}
+.vertical-text{
+    writing-mode: vertical-lr;
+    position: absolute;
+    top: 0;
+    right: 61%;
+    height: 300px;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+/* .horizon-text{
+   
+} */
+
+.Contemporary{
+    height: 1024px;
+}
+
+.Contemporary-heading::before{
+    content: '02';
+    margin-left: 60px;
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+.Contemporary-heading{
+    padding-top: 125px;
+    font-weight: 300;
+    margin : 0;
+    height: 288px;
+    background-color: rgb(162,162,162);
+    color: #fff;
+    font-size: 3.3rem;
+}
+
+.Contemporary-img{
+    float: left;
+}
+/* footer */
+footer dl ,footer dt ,footer dd ,footer address, footer ul{
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    font-size: 1.2rem;
+}
+
+.footer{
+    position: relative;
+    background-color: #eee;
+    height: 415px;
+    line-height: 1.8rem;
+}
+
+.footer-logo{
+    position: absolute;
+    top : 70px;
+    left : 150px;
+    width: 95px;
+    height: 15px;
+    color : #eee;
+}
+.footer-logo::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%; 
+    height: 100%; 
+    background: url('https://learve.co.kr/web/upload/ga09/logo.png') no-repeat;
+    background-size: 90%;
+} 
+
+.footer-group{
+    display: flex;
+    justify-content: flex-start;
+    padding : 125px 150px 0 150px;
+}
+
+.footer-group1, .footer-group2 dl{
+    white-space: pre-line;
+    margin-right: 150px;
+    margin-top: -1em;
+}
+
+.footer-group1 dt, .footer-group2 dt{
+    display: inline-block;
+    margin: 0;
+}
+
+.footer-group1 dd, .footer-group2 dd{
+    display: inline-block;
+    margin : 0 0 auto 5px;
+}
+
+dt, .footer-group1 dd, .footer-group3 {
+    margin-right: 5px;
+    color: gray;
+}
+
+.footer-account{
+    color: #181818 !important;
+    margin : 0 5px 0 0 !important;
+}
+
+.footer-bold-text{
+    font-size: 1.2em;
+    color: #181818 !important;
+    padding-bottom: 12px;
+}
+
+.kakao::before{
+    position: absolute;
+    top: 0;
+    left: -25px;
+    content: url('https://www.limrim.co.kr/web/upload/ga09/kt.gif');
+    transform: translateY(15px);
+}
+
+.kakao{
+    position: relative;
+    text-indent: 25px;
+    padding: 16px 0 23px 0;
+}
+
+.footer-group3, .social-link{
+    list-style: none;
+}
+
+.footer-group3{
+    width: 160px;
+}
+
+.social-link{
+    margin-top: 65px;
+}
+
+.social-link li{
+    display: inline-block;
+}
+
+.social-link li:nth-child(1){
+    width: 65px;
+    height: 20px;
+    background: url("https://learve.co.kr/web/upload/ga09/sns/fb2.png") no-repeat;
+    text-indent: 70px;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+    filter: grayscale(100%);
+    transition: filter .2s 0s;
+}
+
+.social-link li:nth-child(2){
+    margin : 0 12px;
+    width: 20px;
+    height: 20px;
+    background: url("https://learve.co.kr/web/upload/ga09/sns/in2.png") no-repeat;
+    text-indent: 70px;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+    filter: grayscale(100%);
+    transition: filter .2s 0s;
+}
+
+
+.social-link li:nth-child(3){
+    width: 35px;
+    height: 20px;
+    background: url("https://learve.co.kr/web/upload/ga09/sns/blog2.png") no-repeat;
+    text-indent: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+    filter: grayscale(100%);
+    transition: filter .2s 0s;
+}
+.social-link li:nth-child(1):hover,
+.social-link li:nth-child(2):hover,
+.social-link li:nth-child(3):hover{
+    filter: grayscale(0%);
+}
+
+.copyright{
+    position: absolute;
+    bottom : 75px;
+    left : 150px;
+    font-size: 1.2rem;
+    letter-spacing: .1em;
+}
+
+.footer .join-us{
+    position: absolute;
+    top : 60px;
+    right : 150px;
+    width: 140px;
+    height: 40px;
+    font-size: 1.3rem;
+    color: #fff;
+    background: #181818;
+    text-align: center;
+    padding : 12px 0;
+    transition: background .2s 0s;
+}
+
+.footer .join-us:hover{
+    background: rgb(62, 169, 193);
+}
+
+.scroll{
+    width: 55px;
+    height: 45px;
+    position: fixed;
+    right: 18px;
+    text-indent: 56px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.top{
+    background: url('https://www.limrim.co.kr/web/upload/ga09/gotop.png') no-repeat;
+    background-size:  100%; 
+    opacity: 0;
+    top: 82%;
+    z-index: 2000;
+}
+
+.bottom{
+    background: url('https://www.limrim.co.kr/web/upload/ga09/gotop2.png') no-repeat;
+    background-size:  100%;
+    opacity: 0;
+    top: 90%;
+    z-index: 2000;
+}
+
+.button-disabled {
+    animation-name: button-disabled;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+.button-active {
+    animation-name: button-active;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes button-active {
+    0% {
+        opacity: 0;
+    }
+
+    100% {   
+        opacity: 1;
+    }
+}
+
+@keyframes button-disabled {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
