@@ -214,7 +214,7 @@ body{
     background: black ;
 }
 
-.dropdown-menu1 ul li a, .dropdown-menu3 ul li a{
+.dropdown-menu1 ul li a{
     padding: 0 30px;
     transition: color .2s 0s;
 }
@@ -225,7 +225,10 @@ body{
 
 .dropdown-menu1 ul li a:hover, 
 .dropdown-menu2 ul li a:hover, 
-.dropdown-menu3 ul li a:hover{
+.dropdown-menu3 ul li a:hover,
+.dropdown-menu1 ul li a:focus, 
+.dropdown-menu2 ul li a:focus, 
+.dropdown-menu3 ul li a:focus{
    color: pink;
 }
 
@@ -347,10 +350,6 @@ input:checked ~ .carousel-dot-group .carousel-dot{
     opacity: 1; /*투명해제*/
     transform: scale(1);
     transition: opacity 1s ease-in-out;
-}
-
-.slide-container > input:checked + .carousel-controls label{
-    display: block; 
 }
 
 #img-1:checked ~ .carousel-dot-group .img-dot-1,
@@ -815,7 +814,7 @@ dt, .footer-group1 dd, .footer-group3 {
     width: 20px;
     height: 20px;
     background: url("https://learve.co.kr/web/upload/ga09/sns/in2.png") no-repeat;
-    text-indent: 70px;
+    text-indent: 30px;
     white-space: nowrap;
     overflow: hidden;
     cursor: pointer;
@@ -884,14 +883,27 @@ dt, .footer-group1 dd, .footer-group3 {
 }
 
 .advertise-close:checked,
-.advertise-close:checked ~ label,
-.advertise-close:checked + img,
+.advertise-close:checked + .advertise-img,
 .advertise-close:checked ~ div {
     display: none;
 }
 
 .advertise-img{
     margin-left:5px;
+    position: relative;
+    width: 305px;
+    height: 400px;
+}
+
+.advertise-img::after{
+    content: "";
+    background: url("https://learve.co.kr/web/upload/NNEditor/20190408/gED9988ED94BCEBB0B0EB8488.jpg") no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .advertise-checkbox{
