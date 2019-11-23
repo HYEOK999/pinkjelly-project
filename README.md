@@ -53,6 +53,9 @@ limrim 쇼핑몰 사이트 클론
 ### 7. 프로젝트 구현 영상
 
 [![LIMRIM](https://user-images.githubusercontent.com/31315644/69479611-8f1e9d00-0e42-11ea-8a55-7fb3dc0bb943.jpeg)](https://www.youtube.com/watch?v=DvNmy-Iz9Sg&feature=youtu.be)
+
+( 클릭 시 유튜브로 이동됩니다. )
+
 <br/>
 
 ### 7. 한계점 및 보완점 
