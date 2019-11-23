@@ -31,7 +31,15 @@ limrim 쇼핑몰 사이트 클론
 
 <br/>
 
-### 5.  구현 내용
+### 5. 구현 기술
+
+- HTML
+- CSS
+- Javascript
+
+<br/>
+
+### 6.  구현 내용
 
 1. 캐러셀 애니메이션 슬라이드 
 2. hover 애니메이션 
@@ -42,11 +50,9 @@ limrim 쇼핑몰 사이트 클론
 
 <br/>
 
-### 6. 프로젝트 구현 영상
+### 7. 프로젝트 구현 영상
 
 [![LIMRIM](https://user-images.githubusercontent.com/31315644/69479611-8f1e9d00-0e42-11ea-8a55-7fb3dc0bb943.jpeg)](https://www.youtube.com/watch?v=DvNmy-Iz9Sg&feature=youtu.be)
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DvNmy-Iz9Sg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br/>
 
 ### 7. 한계점 및 보완점 
