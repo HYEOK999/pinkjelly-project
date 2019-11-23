@@ -25,9 +25,9 @@ limrim 쇼핑몰 사이트 클론
 
 ### 4. 프로젝트 요구 사항
 
-- W3C에서 제공해도 MarkUp Validation Service 에서 이상이 없을 것.
+- W3C에서 제공한 MarkUp Validation Service 에서 이상이 없을 것.
 - 최대한 시멘틱 하게 작성할 것.
-- html , css 적인 요소를 구현하는 JS를 최대한 사용하지 말 것!
+- html , css 적인 요소를 구현하는 JS를 최대한 사용하지 말 것.
 
 <br/>
 
